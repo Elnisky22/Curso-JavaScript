@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 1</title>
+    </head>
+    
+    <body id="body">
+        <button onclick="tester()">Click me</button>
+
+
+        <script>
+            function tester() {
+                var square = document.createElement('div');
+                square.style.width = 100;
+                square.style.height = 100;
+                square.style.backgroundColor = 'f00';
+
+                var body = document.querySelector('#body');
+                body.appendChild(square);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 4</title>
+    </head>
+    
+    <body id="body">
+        <input id="add" type="text"></input>
+        <button onclick="adicionar()">Adicionar</button>
+
+        <ul id="list">
+        </ul>
+
+
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            function tester() {
+                var list = document.querySelector('#list'); 
+
+                for (nome of nomes) {
+                    var item = document.createElement('li');
+                    item.innerHTML = nome;
+                    list.appendChild(item);
+                }
+            }
+
+            tester();
+
+            function adicionar() {
+                var nome = document.querySelector('#add');
+                var list = document.querySelector('#list');
+
+                var item = document.createElement('li');
+                item.innerHTML = nome.value;
+
+                list.appendChild(item);
+
+                nome.value = "";
+            }
+        </script>
+    </body>
+</html>
